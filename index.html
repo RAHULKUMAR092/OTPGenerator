@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTPGenerator</title>
+    <style>
+        div{
+            height: 300px;
+            width: 400px;
+            margin: 100px auto;
+            padding: 50px;
+            box-sizing: border-box;
+            border: 5px solid maroon;
+            
+        }
+        h1{
+            font-family: Gill Sans Mt;
+            position: relative;
+            bottom: 20px;
+        }
+       h2{
+
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       background: green;
+       color: white;
+       padding: 10px 8px;
+      
+       }
+       #btn{
+        background-color: #e0e0e0;
+        outline: none;
+        border: none;
+        box-shadow: 0px 1px 4px #e0e0e0;
+        width: 290px;
+        padding: 10px 8px;
+        height: 50px;
+        cursor: pointer;
+        font-size: 23px;
+        font-family: gill san mt;
+        box-sizing: border-box;
+        border-radius: 4px;
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>OTP GENERATOR</h1>
+        <h2>XXXXXX</h2>
+        <button id="btn">Refresh</button>
+    </div>
+    <script>
+        var gen=document.querySelector("h2");
+        // function generateOTP(length){
+function generateOTP(length){
+    let otp = '';
+    for(let i = 0; i<length; i++){
+        otp += Math.floor(Math.random()*10).toString();
+
+    }
+    return otp;
+}
+ 
+document.querySelector("button").addEventListener("click",function(){
+gen.style.textAlign="center";
+gen.style.background="green";
+gen.style.color="white";
+gen.innerHTML=(generateOTP(6));
+})
+
+    </script>
+</body>
+</html>
