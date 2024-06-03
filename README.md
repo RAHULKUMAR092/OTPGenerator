@@ -1,1 +1,4 @@
 # OTPGenerator
+# HTML
+# CSS 
+# JAVASCRIPT
